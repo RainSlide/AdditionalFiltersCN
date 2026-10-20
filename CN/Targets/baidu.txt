@@ -110,54 +110,6 @@ tieba.baidu.com##.tbui_fbar_down
 tieba.baidu.com##.tbui_fbar_share
 ! #endregion
 
-! #region 百度知道
-! 广告
-zhidao.baidu.com##.product-container
-
-! APP
-zhidao.baidu.com##.zhidao-app
-
-zhidao.baidu.com##.share-area
-zhidao.baidu.com##.jump-share
-
-! 移除右侧内容（只有特别推荐和广告…）
-zhidao.baidu.com##.qb-section > .qb-side
-zhidao.baidu.com##.qb-section > .qb-content:style(float: none; display: block; margin: 0 auto; padding: 0 30px 30px; border: none)
-
-! 右侧 特别推荐
-! zhidao.baidu.com##.cms-slide
-
-! 红包
-zhidao.baidu.com###answer-bar.exp-answerbtn-yh::after
-! 赚积分 换礼品
-zhidao.baidu.com##.receive-awards-bubble, .earn-points-exchange-gifts-bubble
-! 申请认证
-zhidao.baidu.com##.jump-goto-star
-! #热议#
-zhidao.baidu.com##.question-number-text-chain
-
-||zhidao.baidu.com/question/api/recommend
-||zhidao.baidu.com/question/api/hao123word
-||zhidao.baidu.com/s/toutu/questionnaire.js
-zhidao.baidu.com##.shop-entrance
-! #endregion
-
-! #region 百度文库
-! APP
-wenku.baidu.com##.tool-bar-wrap .btns-wrap .small-btn:has(> .tag-pc-client)
-
-! ||wenku.baidu.com/coupon/promotion/vippop
-||wenku.baidu.com/coupon/*
-! 顶栏 VIP 活动
-wenku.baidu.com##.vip-activity-wrap-new
-! VIP特权
-wenku.baidu.com##.vip-privilege
-! VIP特价购买文档提示
-wenku.baidu.com##.pay-layer-wrapper
-! VIP主题
-wenku.baidu.com##.bg-theme-wrap
-! #endregion
-
 ! #region APP
 ! 百度搜索
 ||bdstatic.com/*/static/superman/img/qrcode/*$image,domain=www.baidu.com
@@ -166,7 +118,10 @@ www.baidu.com###qrcode
 ! 百度搜索 https://www.baidu.com/s?wd=翻译 扫码下载百度翻译APP
 www.baidu.com##.op-guide
 
-baike.baidu.com##div[class^="index-module_appPromote__"]
+! 百度百科 底部推荐 相关搜索
+baike.baidu.com###J-bottom-recommend-wrapper
+baike.baidu.com###J-related-search
+
 fanyi.baidu.com##.sideQrContainer
 fanyi.baidu.com##.products-list:style(filter: grayscale(.5); opacity: .5)
 
@@ -227,6 +182,13 @@ pan.baidu.com##.web-header-ad-item
 pan.baidu.com##.wp-s-header-user__member-status-new-btn-wrap.is-notvip,.wp-s-header-user__member-status.is-notvip,.wp-s-header-user__drop-privilege
 pan.baidu.com##.nd-guide-svip-bar
 pan.baidu.com##.is-guide-svip > .u-dialog > .u-dialog__footer:style(padding-bottom: 24px !important)
+
+! 分享的文件 - 保存成功对话框底部 - 开通SVIP
+pan.baidu.com##.rights-section
+pan.baidu.com##.after-trans-dialog:style(padding-bottom: 24px !important)
+
+! 游戏
+pan.baidu.com##.wp-s-header .gameEntry
 ! #endregion
 
 ! 部分页面的干扰内容
@@ -252,5 +214,64 @@ jingyan.baidu.com###auto-app-placehold
 jingyan.baidu.com##.wgt-income-money
 jingyan.baidu.com##.magzine-list
 
-! 百度网盘 游戏
-pan.baidu.com##.wp-s-header .gameEntry
+
+! #region 百度文库
+! APP
+wenku.baidu.com##.tool-bar-wrap .btns-wrap .small-btn:has(> .tag-pc-client)
+
+! 填PPT问卷送会员卡
+wenku.baidu.com##.banner-wrapper
+wenku.baidu.com##.inner-vip, .comp-vip-pop
+
+! ||wenku.baidu.com/coupon/promotion/vippop
+||wenku.baidu.com/coupon/*
+! 顶栏 VIP 活动
+wenku.baidu.com##.vip-activity-wrap-new
+! VIP特权
+wenku.baidu.com##.vip-privilege
+! VIP特价购买文档提示
+wenku.baidu.com##.pay-layer-wrapper
+! VIP主题
+wenku.baidu.com##.bg-theme-wrap
+
+! 知识库/GenFlow右上角红点
+wenku.baidu.com##.new-icon-small
+wenku.baidu.com##.red-point
+! #endregion
+
+
+! #region 百度知道
+! 广告
+zhidao.baidu.com##.product-container
+
+! APP
+zhidao.baidu.com##.zhidao-app
+
+! Share
+zhidao.baidu.com##.share-area
+zhidao.baidu.com##.jump-share
+
+! 移除右侧内容（只有特别推荐和广告…）
+zhidao.baidu.com##.qb-section > .qb-side
+zhidao.baidu.com##.qb-section > .qb-content:style(float: none; display: block; margin: 0 auto; padding: 0 30px 30px; border: none)
+
+! 右侧 特别推荐
+! zhidao.baidu.com##.cms-slide
+
+! 商城右上角 New
+zhidao.baidu.com##.new-icon
+
+! 红包
+zhidao.baidu.com###answer-bar.exp-answerbtn-yh::after
+! 赚积分 换礼品
+zhidao.baidu.com##.receive-awards-bubble, .earn-points-exchange-gifts-bubble
+! 申请认证
+zhidao.baidu.com##.jump-goto-star
+! #热议#
+zhidao.baidu.com##.question-number-text-chain
+
+||zhidao.baidu.com/question/api/recommend
+||zhidao.baidu.com/question/api/hao123word
+||zhidao.baidu.com/s/toutu/questionnaire.js
+zhidao.baidu.com##.shop-entrance
+! #endregion

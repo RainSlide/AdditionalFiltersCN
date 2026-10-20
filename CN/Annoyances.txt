@@ -3,7 +3,7 @@
 ! Expire: 7 days
 ! ------------------------------------------------------------------------------
 
-! Red Dot & "Hot" & "New" Start
+! #region Red Dot & "Hot" & "New"
 qzone.qq.com,show.qq.com##.ico_new
 qzone.qq.com##.sn-radio
 qzone.qq.com##.icon_app_new_cn,.icon_app_recommend,.icon-red-dot
@@ -26,8 +26,10 @@ gitee.com###gitee-blog > .ui.image
 www.gcores.com##.navLayout_item_append
 
 36kr.com##.live-new-icon
+! #endregion
 
-! Red Dot & "Hot" & "New" End
+! IT之家 - 去除顶栏“软媒应用”高亮显示
+www.ithome.com###top .bb > div div.mt.so:style(background: none !important; border-color: transparent !important)
 
 ! 去你妈的注册弹窗
 douban.com###landing-bar
@@ -37,9 +39,6 @@ douban.com##.ui-overlay-show, .ui-overlay-show body:style(width: initial !import
 ! 去你妈的网友推荐
 dl.3dmgame.com##.downlwrap > .downl_L > .downl_list > .list_r
 down.ali213.net##.common_down_l > .common_down_l_one > h4 ~ *
-
-! 你一个搜索引擎话怎么这么多
-cn.bing.com###ev_talkbox_wrapper
 
 ! 腾讯视频 iframe 底部推荐
 v.qq.com##.txp_tipbar
@@ -175,9 +174,7 @@ icopy.site###backToMainSite
 ! 文字链脚本
 ||static.yxdown.com/all/js/pb2.js
 
-! ----
-
-! 导航网站
+! #region 导航网站
 
 ! 设为首页
 www.hao123.com,hao.qq.com,daohang.qq.com,123.sogou.com###setHome
@@ -208,13 +205,16 @@ hao.qq.com,daohang.qq.com,123.sogou.com###info_flow_coolsite div[class^="style_t
 www.duba.com##.main_box li > a.pic:style(filter: grayscale())
 ! Tip 新版奇迹 刀刀爆装…
 www.duba.com##.main_box li > .tip2
+! #endregion
 
-! 取消各种限制
+! #region 取消各种限制
+
+! 欧陆词典 - 每日英语听力 - 禁止选中
+||dict.eudic.net/Content/css/webting/noselect.css
+
 www.souid.com##+js(ra, onmousemove|oncontextmenu|ondragstart|onselectstart|onselect|oncopy|onbeforecopy|onmouseup, body)
+
 ! xuexi.la
 ||lhpay.gzcl999.com/static/webjs/xuexi.la_wx_copy_pay.js
-! www.fwsir.com
-! ||www.fwsir.com/static/cpt/cpt.js
-! ||www.fwsir.com/static/cpt/pubuliu.js
-||www.fwsir.com/static/cpt/
-||www.fwsir.com/static/js/p.js
+
+! #endregion

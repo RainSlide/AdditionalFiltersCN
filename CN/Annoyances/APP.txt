@@ -87,17 +87,6 @@ coolapk.com##.apk_right
 ! 迅雷直播
 live.xunlei.com##.play_download_slide
 
-! Userstyles.org
-userstyles.org##.overlay_background
-userstyles.org##.us-stylecard--short:has(.fallbackDiv)
-userstyles.org##.us-stylecard--long:has(.fallbackDiv)
-userstyles.org##.fallbackDiv
-userstyles.org##img.fallbackImg
-userstyles.org###top_android_button
-userstyles.org##.android_button_button
-userstyles.org##.android_button_banner
-userstyles.org##.walking
-
 ! ChinaZ
 www.chinaz.com##.cz-weixin
 
@@ -105,7 +94,10 @@ www.chinaz.com##.cz-weixin
 www.xiami.com###qrcode
 
 ! 新京报
-www.bjnews.com.cn###follow
+www.bjnews.com.cn##.backTop2, .backTop3, .backTop4
+! 修复 AdGuard - Social Widgets
+! 新京报的分享按钮默认是灰色的，可以留着；这条通配规则还只能屏蔽按钮边框
+www.bjnews.com.cn#@#a[href^="http://service.weibo.com/share/share.php"]
 
 ! 3DM
 www.3dmgame.com##.content a[href="https://www.3dmgame.com/app.html"]

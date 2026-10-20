@@ -6,7 +6,7 @@
 !     which should be found & listed & blocked YEARS ago.
 ! Homepage: https://github.com/Crystal-RainSlide/AdditionalFiltersCN
 ! Expire: 7 days
-! Last Modified: 12-Nov-2025/13:48:44+08:00
+! Last Modified: 20-Oct-2026/22:21:48+08:00
 
 ! 淘宝 Taobao
 www.taobao.com###smartbanner
@@ -117,11 +117,15 @@ v2ex.com##div:has(> script[src]:first-child + .adsbygoogle + script:last-child:h
 ! 侧栏图片广告
 v2ex.com##.box:has(> .inner > a:only-child > img[src*="/assets/sidebar/"])
 
+! 123云盘 分享页背景广告
+||public.static.dhsz.cn/prod/m3/1688.jpg$image
+
 ! Engadget
 cn.engadget.com###module-engadget-deeplink-top-ad
 cn.engadget.com##div[class]:has(> div[id]:first-child + script:last-child)
 
 ! 异次元软件世界
+www.iplaysoft.com##.entry-recommend-posts
 www.iplaysoft.com##.sidebar_bdad_list
 www.iplaysoft.com###sidebar_scroll_bdad
 www.iplaysoft.com###section_show_post:style(width: 714px !important; margin-inline: auto)
@@ -133,6 +137,9 @@ www.doc88.com##.columns-ad
 
 ! 腾讯云
 cloud.tencent.com##.has-sign
+
+! 问卷星
+www.wjx.cn###divAward,#divCoupon,#aCoupon
 
 ! cnBeta
 ! cnbeta.com.tw##body > div:has-text(帮助cnBeta.COM更好地生产内容，请将我们加入广告屏蔽插件的白名单，非常感谢。)
@@ -166,7 +173,7 @@ club.kdnet.net##.links
 
 c.biancheng.net###ad-arc-top, #ad-bottom-weixin
 
-www.iplaysoft.com##.entry-recommend-posts
+fundact.eastmoney.com###referAdDiv
 
 ! Premium Content Promotion Start
 
@@ -278,17 +285,6 @@ coolapk.com##.apk_right
 ! 迅雷直播
 live.xunlei.com##.play_download_slide
 
-! Userstyles.org
-userstyles.org##.overlay_background
-userstyles.org##.us-stylecard--short:has(.fallbackDiv)
-userstyles.org##.us-stylecard--long:has(.fallbackDiv)
-userstyles.org##.fallbackDiv
-userstyles.org##img.fallbackImg
-userstyles.org###top_android_button
-userstyles.org##.android_button_button
-userstyles.org##.android_button_banner
-userstyles.org##.walking
-
 ! ChinaZ
 www.chinaz.com##.cz-weixin
 
@@ -296,7 +292,10 @@ www.chinaz.com##.cz-weixin
 www.xiami.com###qrcode
 
 ! 新京报
-www.bjnews.com.cn###follow
+www.bjnews.com.cn##.backTop2, .backTop3, .backTop4
+! 修复 AdGuard - Social Widgets
+! 新京报的分享按钮默认是灰色的，可以留着；这条通配规则还只能屏蔽按钮边框
+www.bjnews.com.cn#@#a[href^="http://service.weibo.com/share/share.php"]
 
 ! 3DM
 www.3dmgame.com##.content a[href="https://www.3dmgame.com/app.html"]
@@ -461,7 +460,7 @@ www.iplaysoft.com###elevator_social > .float-left:nth-of-type(2):style(width: 10
 ||www.secrss.com/wx_qrcode.jpg
 www.secrss.com##.qrcode
 
-! Red Dot & "Hot" & "New" Start
+! #region Red Dot & "Hot" & "New"
 qzone.qq.com,show.qq.com##.ico_new
 qzone.qq.com##.sn-radio
 qzone.qq.com##.icon_app_new_cn,.icon_app_recommend,.icon-red-dot
@@ -484,8 +483,10 @@ gitee.com###gitee-blog > .ui.image
 www.gcores.com##.navLayout_item_append
 
 36kr.com##.live-new-icon
+! #endregion
 
-! Red Dot & "Hot" & "New" End
+! IT之家 - 去除顶栏“软媒应用”高亮显示
+www.ithome.com###top .bb > div div.mt.so:style(background: none !important; border-color: transparent !important)
 
 ! 去你妈的注册弹窗
 douban.com###landing-bar
@@ -495,9 +496,6 @@ douban.com##.ui-overlay-show, .ui-overlay-show body:style(width: initial !import
 ! 去你妈的网友推荐
 dl.3dmgame.com##.downlwrap > .downl_L > .downl_list > .list_r
 down.ali213.net##.common_down_l > .common_down_l_one > h4 ~ *
-
-! 你一个搜索引擎话怎么这么多
-cn.bing.com###ev_talkbox_wrapper
 
 ! 腾讯视频 iframe 底部推荐
 v.qq.com##.txp_tipbar
@@ -633,9 +631,7 @@ icopy.site###backToMainSite
 ! 文字链脚本
 ||static.yxdown.com/all/js/pb2.js
 
-! ----
-
-! 导航网站
+! #region 导航网站
 
 ! 设为首页
 www.hao123.com,hao.qq.com,daohang.qq.com,123.sogou.com###setHome
@@ -666,16 +662,19 @@ hao.qq.com,daohang.qq.com,123.sogou.com###info_flow_coolsite div[class^="style_t
 www.duba.com##.main_box li > a.pic:style(filter: grayscale())
 ! Tip 新版奇迹 刀刀爆装…
 www.duba.com##.main_box li > .tip2
+! #endregion
 
-! 取消各种限制
+! #region 取消各种限制
+
+! 欧陆词典 - 每日英语听力 - 禁止选中
+||dict.eudic.net/Content/css/webting/noselect.css
+
 www.souid.com##+js(ra, onmousemove|oncontextmenu|ondragstart|onselectstart|onselect|oncopy|onbeforecopy|onmouseup, body)
+
 ! xuexi.la
 ||lhpay.gzcl999.com/static/webjs/xuexi.la_wx_copy_pay.js
-! www.fwsir.com
-! ||www.fwsir.com/static/cpt/cpt.js
-! ||www.fwsir.com/static/cpt/pubuliu.js
-||www.fwsir.com/static/cpt/
-||www.fwsir.com/static/js/p.js
+
+! #endregion
 
 */cdn-cgi/trace^$xhr
 
@@ -779,7 +778,12 @@ www.souid.com##+js(ra, onmousemove|oncontextmenu|ondragstart|onselectstart|onsel
 ||js.passport.qihucdn.com/*$script,third-party
 ||jspassport.ssl.qhimg.com^$script,third-party
 
-! Sina
+
+! 微博 Weibo
+! ||weibo.com/ajax/log/rum$xhr
+||weibo.com/ajax/log/*$xhr
+
+! 新浪 Sina
 ||log.mix.sina.com.cn^
 ||sbeacon.sina.com.cn^
 
@@ -885,6 +889,9 @@ www.souid.com##+js(ra, onmousemove|oncontextmenu|ondragstart|onselectstart|onsel
 
 ! ---
 
+! 新京报
+||static.bjnews.com.cn/public/tj.js
+
 ! KaFan
 ||a.ikafan.com/*/tj.js
 
@@ -985,9 +992,6 @@ t.bilibili.com#@#.back-top
 ! bugs.chromium.org
 ! /popup_
 @@*/static/js/graveyard/popup_controller.js^
-
-! Userstyles
-@@||userstyles.org/ui/images/icons/*$image
 
 ! wikiHow
 @@||www.wikihow.com/images/*$image
@@ -1090,6 +1094,8 @@ ent.163.com##.share, .share-more
 ! #endregion
 
 ! #region 网易云音乐
+! 客户端
+music.163.com###m-guidetip
 ! 下载客户端
 music.163.com##.download
 ! 下载客户端 修复样式 居中 banner
@@ -1134,9 +1140,32 @@ fanyi.youdao.com##.side__nav
 fanyi.youdao.com##.ic_new_tag
 ! #endregion
 
-! 网易邮箱
-mail.163.com###adtag
-mail.163.com##.nui-ico-new3
+! #region 网易邮箱6.0版
+! 广告残留
+mail.163.com##.frame-main-cont-body div[id$=_dvmailrecompanel]
+
+! 开通超级会员
+mail.163.com##.frame-head ul[role="navigation"] > [name="upgrade"]
+! 升级邮箱会员，尊享专属皮肤
+mail.163.com##div.js-component-component:has( > #dvTopnavSkinTitle)
+! 开通邮箱会员
+mail.163.com##.frame-main p[id$=_dvPayment]
+
+! 【网易企业邮箱】企业域名邮箱，低至500元!
+mail.163.com##.frame-main p[id$=_warnTips_bar_marketing]
+
+! 新闻 iframe（似乎已被移除）
+! ||news.163.com/special/163mail_world/$subdocument,domain=mail.163.com
+
+
+! 发票助手 - New
+mail.163.com###navInvoiceAssistantNew
+! AI工具箱内小红点（约 15 个）
+mail.163.com##.ai-import-point::after
+
+! 去除左侧栏底部多余 padding
+mail.163.com###dvNavFoot:style(padding: 0 0 40px !important)
+! #endregion
 
 ! 网易公开课
 open.163.com##.advertisement
@@ -1183,7 +1212,7 @@ open.163.com##.comment:style(margin-top: 0 !important)
 
 ! spy-client
 ! https://code.bdstatic.com/npm/spy-client@1.0.3/dist/spy-client.min.js
-||code.bdstatic.com/npm/spy-client^$domain=~haokan.baidu.com
+||code.bdstatic.com/npm/spy-client^$domain=~haokan.baidu.com|~mbd.baidu.com
 
 ! ||staticiot.cdn.bcebos.com/union/badjs-sdk-min-2.0.0.js
 ||staticiot.cdn.bcebos.com/union/badjs-sdk-*
@@ -1250,54 +1279,6 @@ tieba.baidu.com##.tbui_fbar_down
 tieba.baidu.com##.tbui_fbar_share
 ! #endregion
 
-! #region 百度知道
-! 广告
-zhidao.baidu.com##.product-container
-
-! APP
-zhidao.baidu.com##.zhidao-app
-
-zhidao.baidu.com##.share-area
-zhidao.baidu.com##.jump-share
-
-! 移除右侧内容（只有特别推荐和广告…）
-zhidao.baidu.com##.qb-section > .qb-side
-zhidao.baidu.com##.qb-section > .qb-content:style(float: none; display: block; margin: 0 auto; padding: 0 30px 30px; border: none)
-
-! 右侧 特别推荐
-! zhidao.baidu.com##.cms-slide
-
-! 红包
-zhidao.baidu.com###answer-bar.exp-answerbtn-yh::after
-! 赚积分 换礼品
-zhidao.baidu.com##.receive-awards-bubble, .earn-points-exchange-gifts-bubble
-! 申请认证
-zhidao.baidu.com##.jump-goto-star
-! #热议#
-zhidao.baidu.com##.question-number-text-chain
-
-||zhidao.baidu.com/question/api/recommend
-||zhidao.baidu.com/question/api/hao123word
-||zhidao.baidu.com/s/toutu/questionnaire.js
-zhidao.baidu.com##.shop-entrance
-! #endregion
-
-! #region 百度文库
-! APP
-wenku.baidu.com##.tool-bar-wrap .btns-wrap .small-btn:has(> .tag-pc-client)
-
-! ||wenku.baidu.com/coupon/promotion/vippop
-||wenku.baidu.com/coupon/*
-! 顶栏 VIP 活动
-wenku.baidu.com##.vip-activity-wrap-new
-! VIP特权
-wenku.baidu.com##.vip-privilege
-! VIP特价购买文档提示
-wenku.baidu.com##.pay-layer-wrapper
-! VIP主题
-wenku.baidu.com##.bg-theme-wrap
-! #endregion
-
 ! #region APP
 ! 百度搜索
 ||bdstatic.com/*/static/superman/img/qrcode/*$image,domain=www.baidu.com
@@ -1306,7 +1287,10 @@ www.baidu.com###qrcode
 ! 百度搜索 https://www.baidu.com/s?wd=翻译 扫码下载百度翻译APP
 www.baidu.com##.op-guide
 
-baike.baidu.com##div[class^="index-module_appPromote__"]
+! 百度百科 底部推荐 相关搜索
+baike.baidu.com###J-bottom-recommend-wrapper
+baike.baidu.com###J-related-search
+
 fanyi.baidu.com##.sideQrContainer
 fanyi.baidu.com##.products-list:style(filter: grayscale(.5); opacity: .5)
 
@@ -1367,6 +1351,13 @@ pan.baidu.com##.web-header-ad-item
 pan.baidu.com##.wp-s-header-user__member-status-new-btn-wrap.is-notvip,.wp-s-header-user__member-status.is-notvip,.wp-s-header-user__drop-privilege
 pan.baidu.com##.nd-guide-svip-bar
 pan.baidu.com##.is-guide-svip > .u-dialog > .u-dialog__footer:style(padding-bottom: 24px !important)
+
+! 分享的文件 - 保存成功对话框底部 - 开通SVIP
+pan.baidu.com##.rights-section
+pan.baidu.com##.after-trans-dialog:style(padding-bottom: 24px !important)
+
+! 游戏
+pan.baidu.com##.wp-s-header .gameEntry
 ! #endregion
 
 ! 部分页面的干扰内容
@@ -1392,8 +1383,67 @@ jingyan.baidu.com###auto-app-placehold
 jingyan.baidu.com##.wgt-income-money
 jingyan.baidu.com##.magzine-list
 
-! 百度网盘 游戏
-pan.baidu.com##.wp-s-header .gameEntry
+
+! #region 百度文库
+! APP
+wenku.baidu.com##.tool-bar-wrap .btns-wrap .small-btn:has(> .tag-pc-client)
+
+! 填PPT问卷送会员卡
+wenku.baidu.com##.banner-wrapper
+wenku.baidu.com##.inner-vip, .comp-vip-pop
+
+! ||wenku.baidu.com/coupon/promotion/vippop
+||wenku.baidu.com/coupon/*
+! 顶栏 VIP 活动
+wenku.baidu.com##.vip-activity-wrap-new
+! VIP特权
+wenku.baidu.com##.vip-privilege
+! VIP特价购买文档提示
+wenku.baidu.com##.pay-layer-wrapper
+! VIP主题
+wenku.baidu.com##.bg-theme-wrap
+
+! 知识库/GenFlow右上角红点
+wenku.baidu.com##.new-icon-small
+wenku.baidu.com##.red-point
+! #endregion
+
+
+! #region 百度知道
+! 广告
+zhidao.baidu.com##.product-container
+
+! APP
+zhidao.baidu.com##.zhidao-app
+
+! Share
+zhidao.baidu.com##.share-area
+zhidao.baidu.com##.jump-share
+
+! 移除右侧内容（只有特别推荐和广告…）
+zhidao.baidu.com##.qb-section > .qb-side
+zhidao.baidu.com##.qb-section > .qb-content:style(float: none; display: block; margin: 0 auto; padding: 0 30px 30px; border: none)
+
+! 右侧 特别推荐
+! zhidao.baidu.com##.cms-slide
+
+! 商城右上角 New
+zhidao.baidu.com##.new-icon
+
+! 红包
+zhidao.baidu.com###answer-bar.exp-answerbtn-yh::after
+! 赚积分 换礼品
+zhidao.baidu.com##.receive-awards-bubble, .earn-points-exchange-gifts-bubble
+! 申请认证
+zhidao.baidu.com##.jump-goto-star
+! #热议#
+zhidao.baidu.com##.question-number-text-chain
+
+||zhidao.baidu.com/question/api/recommend
+||zhidao.baidu.com/question/api/hao123word
+||zhidao.baidu.com/s/toutu/questionnaire.js
+zhidao.baidu.com##.shop-entrance
+! #endregion
 
 ! 阻止B站往链接里加 spmid
 ||hdslb.com/bfs/seed/jinkela/short/auto-append-spmid.js^
@@ -1430,6 +1480,9 @@ bilibili.com##+js(trusted-suppress-native-method, navigator.sendBeacon, '/data\.
 ||api.bilibili.com/x/click-interface/click/now^
 ! Data Collector API
 ||api.bilibili.com/x/web-frontend/data/collector$xhr
+
+! Monitor
+||api.bilibili.com/open/monitor/report^
 
 ! 广告通用
 www.bilibili.com##.ad-report

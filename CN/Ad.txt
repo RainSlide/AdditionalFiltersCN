@@ -112,11 +112,15 @@ v2ex.com##div:has(> script[src]:first-child + .adsbygoogle + script:last-child:h
 ! 侧栏图片广告
 v2ex.com##.box:has(> .inner > a:only-child > img[src*="/assets/sidebar/"])
 
+! 123云盘 分享页背景广告
+||public.static.dhsz.cn/prod/m3/1688.jpg$image
+
 ! Engadget
 cn.engadget.com###module-engadget-deeplink-top-ad
 cn.engadget.com##div[class]:has(> div[id]:first-child + script:last-child)
 
 ! 异次元软件世界
+www.iplaysoft.com##.entry-recommend-posts
 www.iplaysoft.com##.sidebar_bdad_list
 www.iplaysoft.com###sidebar_scroll_bdad
 www.iplaysoft.com###section_show_post:style(width: 714px !important; margin-inline: auto)
@@ -128,6 +132,9 @@ www.doc88.com##.columns-ad
 
 ! 腾讯云
 cloud.tencent.com##.has-sign
+
+! 问卷星
+www.wjx.cn###divAward,#divCoupon,#aCoupon
 
 ! cnBeta
 ! cnbeta.com.tw##body > div:has-text(帮助cnBeta.COM更好地生产内容，请将我们加入广告屏蔽插件的白名单，非常感谢。)
@@ -161,7 +168,7 @@ club.kdnet.net##.links
 
 c.biancheng.net###ad-arc-top, #ad-bottom-weixin
 
-www.iplaysoft.com##.entry-recommend-posts
+fundact.eastmoney.com###referAdDiv
 
 ! Premium Content Promotion Start
 

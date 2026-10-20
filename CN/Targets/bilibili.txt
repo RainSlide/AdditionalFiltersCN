@@ -39,6 +39,9 @@ bilibili.com##+js(trusted-suppress-native-method, navigator.sendBeacon, '/data\.
 ! Data Collector API
 ||api.bilibili.com/x/web-frontend/data/collector$xhr
 
+! Monitor
+||api.bilibili.com/open/monitor/report^
+
 ! 广告通用
 www.bilibili.com##.ad-report
 ! 右侧推荐视频列表底部广告

@@ -105,7 +105,12 @@
 ||js.passport.qihucdn.com/*$script,third-party
 ||jspassport.ssl.qhimg.com^$script,third-party
 
-! Sina
+
+! 微博 Weibo
+! ||weibo.com/ajax/log/rum$xhr
+||weibo.com/ajax/log/*$xhr
+
+! 新浪 Sina
 ||log.mix.sina.com.cn^
 ||sbeacon.sina.com.cn^
 
@@ -210,6 +215,9 @@
 ||www.yuketang.cn/*/log/*
 
 ! ---
+
+! 新京报
+||static.bjnews.com.cn/public/tj.js
 
 ! KaFan
 ||a.ikafan.com/*/tj.js

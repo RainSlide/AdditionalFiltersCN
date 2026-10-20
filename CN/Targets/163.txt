@@ -89,6 +89,8 @@ ent.163.com##.share, .share-more
 ! #endregion
 
 ! #region 网易云音乐
+! 客户端
+music.163.com###m-guidetip
 ! 下载客户端
 music.163.com##.download
 ! 下载客户端 修复样式 居中 banner
@@ -133,9 +135,32 @@ fanyi.youdao.com##.side__nav
 fanyi.youdao.com##.ic_new_tag
 ! #endregion
 
-! 网易邮箱
-mail.163.com###adtag
-mail.163.com##.nui-ico-new3
+! #region 网易邮箱6.0版
+! 广告残留
+mail.163.com##.frame-main-cont-body div[id$=_dvmailrecompanel]
+
+! 开通超级会员
+mail.163.com##.frame-head ul[role="navigation"] > [name="upgrade"]
+! 升级邮箱会员，尊享专属皮肤
+mail.163.com##div.js-component-component:has( > #dvTopnavSkinTitle)
+! 开通邮箱会员
+mail.163.com##.frame-main p[id$=_dvPayment]
+
+! 【网易企业邮箱】企业域名邮箱，低至500元!
+mail.163.com##.frame-main p[id$=_warnTips_bar_marketing]
+
+! 新闻 iframe（似乎已被移除）
+! ||news.163.com/special/163mail_world/$subdocument,domain=mail.163.com
+
+
+! 发票助手 - New
+mail.163.com###navInvoiceAssistantNew
+! AI工具箱内小红点（约 15 个）
+mail.163.com##.ai-import-point::after
+
+! 去除左侧栏底部多余 padding
+mail.163.com###dvNavFoot:style(padding: 0 0 40px !important)
+! #endregion
 
 ! 网易公开课
 open.163.com##.advertisement
