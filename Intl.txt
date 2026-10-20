@@ -6,7 +6,7 @@
 !     which should be found & listed & blocked YEARS ago.
 ! Homepage: https://github.com/Crystal-RainSlide/AdditionalFiltersCN
 ! Expire: 7 days
-! Last Modified: 15-Nov-2025/14:45:59+08:00
+! Last Modified: 20-Oct-2026/22:21:48+08:00
 
 ! AOL
 ||o.aolcdn.com/ads/*$important
@@ -56,11 +56,14 @@ outlook.live.com###MainModule + div:last-child:has(> div:only-child > div > #owa
 old.reddit.com##.ad-container
 
 ! SourceForge
+sourceforge.net##.nel-vert
+sourceforge.net##.m-sidebar-widget:has(> .nel-vert)
 sourceforge.net##.main-nav-link
 sourceforge.net###floating-content
 
-! Pixiv - Premium ad in Header
-www.pixiv.net##iframe[src^="https://imp.pixiv.net/premium_lp?"] + a[href^="/premium/lead/lp?"]
+
+! Pixiv - Premium ad in Header (.text-premium)
+www.pixiv.net##iframe[src^="https://imp.pixiv.net/premium_lp?"] + a[href^="/premium/lead/lp/"]
 
 ! NPR
 www.npr.org###main-sidebar:has(> #ad-standard-wrap:only-child)
@@ -118,6 +121,9 @@ symbolab.com##+js(set, SOLUTIONS.subscribed, true)
 
 @@||www.fosshub.com/media/js/adblock.js$first-party
 www.fosshub.com##.ad
+
+! Niconico
+||res.ads.nicovideo.jp/assets/js/ads2.js
 
 ! iFixit
 ||ifixit-assets.??.ifixit.com/Assets/Admin/Shared-Campaigns-campaign_banners-*
@@ -223,17 +229,6 @@ disk.yandex.com##.ns-view-dialogWelcome
 
 ! 9GAG
 9gag.com##.get-the-app-banner
-
-! Userstyles.org
-userstyles.org##.overlay_background
-userstyles.org##.us-stylecard--short:has(.fallbackDiv)
-userstyles.org##.us-stylecard--long:has(.fallbackDiv)
-userstyles.org##.fallbackDiv
-userstyles.org##img.fallbackImg
-userstyles.org###top_android_button
-userstyles.org##.android_button_button
-userstyles.org##.android_button_banner
-userstyles.org##.walking
 
 yadi.sk##.app-promo-banner
 
@@ -419,6 +414,9 @@ fandom.com##body.wikia-bar-visible:style(padding-bottom: 0 !important)
 fandom.com###mixed-content-footer
 ! featured video
 fandom.com##.featured-video__wrapper
+
+! Flickr - transparent element over pics
+www.flickr.com##.facade-of-protection-zoom
 
 ! Experts Exchange - Show hidden content
 www.experts-exchange.com##.answer > .content.interceptContentScroll:style(display: block !important)

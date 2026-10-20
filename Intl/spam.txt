@@ -31,6 +31,9 @@ fandom.com###mixed-content-footer
 ! featured video
 fandom.com##.featured-video__wrapper
 
+! Flickr - transparent element over pics
+www.flickr.com##.facade-of-protection-zoom
+
 ! Experts Exchange - Show hidden content
 www.experts-exchange.com##.answer > .content.interceptContentScroll:style(display: block !important)
 www.experts-exchange.com##.interceptContainer

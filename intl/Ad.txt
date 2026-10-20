@@ -51,11 +51,14 @@ outlook.live.com###MainModule + div:last-child:has(> div:only-child > div > #owa
 old.reddit.com##.ad-container
 
 ! SourceForge
+sourceforge.net##.nel-vert
+sourceforge.net##.m-sidebar-widget:has(> .nel-vert)
 sourceforge.net##.main-nav-link
 sourceforge.net###floating-content
 
-! Pixiv - Premium ad in Header
-www.pixiv.net##iframe[src^="https://imp.pixiv.net/premium_lp?"] + a[href^="/premium/lead/lp?"]
+
+! Pixiv - Premium ad in Header (.text-premium)
+www.pixiv.net##iframe[src^="https://imp.pixiv.net/premium_lp?"] + a[href^="/premium/lead/lp/"]
 
 ! NPR
 www.npr.org###main-sidebar:has(> #ad-standard-wrap:only-child)
@@ -113,6 +116,9 @@ symbolab.com##+js(set, SOLUTIONS.subscribed, true)
 
 @@||www.fosshub.com/media/js/adblock.js$first-party
 www.fosshub.com##.ad
+
+! Niconico
+||res.ads.nicovideo.jp/assets/js/ads2.js
 
 ! iFixit
 ||ifixit-assets.??.ifixit.com/Assets/Admin/Shared-Campaigns-campaign_banners-*
