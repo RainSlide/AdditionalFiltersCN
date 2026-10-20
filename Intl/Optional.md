@@ -1,20 +1,18 @@
-### Userstyles.org
+# Optional rules
 
-Block Userstyles.org offical's dazzling userstyles
+## Click2load Youtube iframes
 
-```
-userstyles.org##.us-stylecard--short:has(a[href="/users/394989"])
-userstyles.org##.us-stylecard--long:has(a[href="/users/394989"])
-```
-
-Block annoying carousel on Userstyles.org's homepage
-
-```
-userstyles.org###view_inner > div:has(#wrapper-carousel)
+``` adblock
+! Click2load Youtube iframes
+||youtube.com$3p,frame,redirect=click2load.html
+||youtube-nocookie.com$3p,frame,redirect=click2load.html
 ```
 
-Since Userstyles.org's Roboto is just a common UI font (similar to almost ALL the default Sans-Serif UI fonts), you may block it like nothing happens.
+Infomation & source code location of `click2load.html` can be found on [uBlock Origin wiki's Resources Library page](https://github.com/gorhill/uBlock/wiki/Resources-Library#available-resources).
 
-```
-||fonts.googleapis.com^$domain=userstyles.org
+## Block Google Map iframes
+
+``` adblock
+! Block Google Map iframe on ipinfo.io
+||www.google.com/maps/embed/*$subdocument,domain=ipinfo.io
 ```

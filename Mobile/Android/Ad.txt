@@ -64,11 +64,6 @@ douploads.com##.socialmedia
 douploads.com##td:has(#sharebuttons)
 douploads.com###sidebar
 
-||connect.facebook.net^$domain=userstyles.org
-||apis.google.com/js/plusone.js$domain=userstyles.org
-||platform.twitter.com/widgets.js$domain=userstyles.org
-||assets.pinterest.com^$domain=userstyles.org
-||fonts.googleapis.com^$domain=userstyles.org
 upload4earn.net##.mngez_premium
 upload4earn.com##.mngez_premium
 upload4earn.com###socialmedia
