@@ -4,24 +4,18 @@
 ! ------------------------------------------------------------------------------
 
 ! #region Red Dot & "Hot" & "New"
-qzone.qq.com,show.qq.com##.ico_new
-qzone.qq.com##.sn-radio
-qzone.qq.com##.icon_app_new_cn,.icon_app_recommend,.icon-red-dot
-h5.qzone.qq.com##.icon-new
-
-docs.qq.com##.dui-badge-dot
-mail.qq.com##.ico_rednew
-
-! QQ音乐 抢特权
-||y.qq.com/mediastyle/yqq/extra/mark_1.png
-y.qq.com##.top_nav__mark
-
 www.zhihu.com##.TopSearch-hot:style(filter: grayscale())
 
 www.chinaz.com##.hot
 
-! 模力方舟
+! 顶栏 - 模力方舟 右上角 图标
 gitee.com###gitee-blog > .ui.image
+gitee.com##nav > ul > li > a > img[alt="notification star"]
+
+! 首页顶栏 - 价格 右上角 特惠
+gitee.com##nav > ul > li > a[href="/enterprises/price"] > sup
+
+! red dot
 
 www.gcores.com##.navLayout_item_append
 
@@ -40,9 +34,6 @@ douban.com##.ui-overlay-show, .ui-overlay-show body:style(width: initial !import
 dl.3dmgame.com##.downlwrap > .downl_L > .downl_list > .list_r
 down.ali213.net##.common_down_l > .common_down_l_one > h4 ~ *
 
-! 腾讯视频 iframe 底部推荐
-v.qq.com##.txp_tipbar
-
 ! 搜狐 Sohu
 ! 劣质内容：大家都在看，热门精选
 www.sohu.com###articleAllsee, .hot-atlas
@@ -57,21 +48,6 @@ weibo.com##.gn_search_v2 > .placeholder
 m.weibo.cn##.m-search > .m-text-cut:style(color: transparent; user-select: none;)
 ! m.weibo.cn 搜索页
 m.weibo.cn##.nt-search input[type="search"]::placeholder
-
-! 腾讯文档 水印
-docs.qq.com###watermark-container
-
-! QQ 空间
-! 看看大家都看了什么？开通黄钻可查看1000人的访问轨迹。
-user.qzone.qq.com##.fn_accessLog_tips
-
-h5.qzone.qq.com##.mod-native-tips-wrap
-h5.qzone.qq.com##li[global-hot="topbar.vip"]
-h5.qzone.qq.com##.gb-nav > li:style(width: 25% !important)
-h5.qzone.qq.com##.mod-pb-list .avatar.commend::before
-
-! QQ 看点快报 热点推荐
-kuaibao.qq.com##.recomm-card
 
 ! Zhihu
 ||www.zhihu.com/api/*/hot_recommendation$xmlhttprequest
@@ -99,6 +75,9 @@ www.jianshu.com##header span[aria-label="简书钻"]
 
 ! 新京报
 www.bjnews.com.cn##.layer_mian
+
+! 天翼云 VIP 标志
+cloud.189.cn##.vipIcon
 
 ! 超星
 ||chaoxing.com/ananas/space/exam/js/enc_js_work.js

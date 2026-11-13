@@ -1,0 +1,126 @@
+! Title: AdditionalFiltersCN - 腾讯 Tencent
+! Homepage: https://github.com/Crystal-RainSlide/AdditionalFiltersCN
+! Expire: 7 days
+! ------------------------------------------------------------------------------
+
+! #region DC
+
+! 腾讯 Tencent
+! ||baas.browser.qq.com/report/functions/report?$image
+! ||mp.weixin.qq.com/mp/report?$image
+||qq.com/*/report?$image
+
+||aegis.qq.com^
+
+! ||report.huatuo.qq.com^
+! ||report.qqweb.qq.com^
+||report.*.qq.com^
+||report.url.cn^
+
+||qzone.qq.com/proxy/domain/statistic.qzone.qq.com^
+
+! ||h5.qzone.qq.com/report/md^
+||qzone.qq.com/report/*$xhr,image
+
+! ||qzonestyle.gtimg.cn/ac/qzfl/release/expand/ping_sender.js^
+! ||qzs.qq.com/ac/qzfl/release/expand/ping_sender.js^
+*/ac/qzfl/release/expand/ping_sender.js^
+
+||qzonestyle.gtimg.cn/qzone/v8/ic/iframeReport.js^
+||h5.qzone.qq.com/iframe/report^
+
+||qzonestyle.gtimg.cn/qzone/v8/core/stat.js^
+||qzonestyle.gtimg.cn/qzone/v8/ic/stat_monitor.js^
+
+! ||user.qzone.qq.com/proxy/domain/analy.qzone.qq.com/cgi-bin/apptrace^$image
+*/cgi-bin/apptrace^$image
+||huatuospeed.weiyun.com/cgi-bin/r.cgi^$image
+||huatuocode.weiyun.com/code.cgi^$image
+
+||dj.captcha.qq.com/caplog
+||stdl.qq.com/stdl/qb/js/qblog.js
+
+! ||mat1.gtimg.com/js/speed_v1.9-min.js
+
+||mat1.gtimg.com/js/speed_*.js
+
+! From mail.qq.com
+||rl.mail.qq.com/cgi-bin/getinvestigate
+
+! From mp.weixin.qq.com
+! ||mp.weixin.qq.com/mp/appmsgreport?
+! ||mp.weixin.qq.com/mp/jsreport?
+! ||mp.weixin.qq.com/mp/fereport?
+! ||mp.weixin.qq.com/mp/musicreport?
+||mp.weixin.qq.com/mp/*report?$image,xmlhttprequest
+||mp.weixin.qq.com/mp/jsmonitor?
+||badjs.weixinbridge.com^
+
+! From guanjia.qq.com
+||tajs.qq.com/stats$important
+||s.pc.qq.com/guanjia/js/tj.js
+||guanjia.qq.com/assets/js/*$script
+
+! From www.163.com
+||browsertdidticket.m.qq.com^
+||gatherer.m.qq.com/event/report^
+
+! #endregion
+
+! 腾讯新闻 扫码领红包
+new.qq.com##.fixed-bar > a[href="//new.qq.com/hb_index.htm"]
+
+! 腾讯新闻 分享
+new.qq.com##.share
+new.qq.com##.share-title
+
+! QQ 看点快报 热点推荐
+kuaibao.qq.com##.recomm-card
+
+! 腾讯软件中心
+pc.qq.com###J_banmgrbox
+
+! 腾讯视频 iframe 底部推荐
+v.qq.com##.txp_tipbar
+
+! QQ音乐 抢特权
+||y.qq.com/mediastyle/yqq/extra/mark_1.png
+y.qq.com##.top_nav__mark
+
+! #region 腾讯文档
+! 主页顶栏 会员中心
+docs.qq.com##.desktop-vip-center
+
+! 文档顶栏用户菜单 会员推广
+docs.qq.com##.vip-info-panel.none
+
+! 水印
+docs.qq.com###watermark-container
+
+! 免费体验企业版 右侧 new
+docs.qq.com##.desktop-enterprise-edition-entry-label .dui-badge-count
+! #endregion
+
+! #region QQ 空间
+qzone.qq.com##.f_item_ad
+user.qzone.qq.com###tab_applist_show > li[class]
+user.qzone.qq.com###tab_applist_show > li[data-recommend]
+
+! 用户名右侧 开通黄钻
+user.qzone.qq.com##.qz-btn-vip-open
+
+! 看看大家都看了什么？开通黄钻可查看1000人的访问轨迹。
+user.qzone.qq.com##.fn_accessLog_tips
+
+h5.qzone.qq.com##.mod-native-tips-wrap
+h5.qzone.qq.com##li[global-hot="topbar.vip"]
+h5.qzone.qq.com##.gb-nav > li:style(width: 25% !important)
+h5.qzone.qq.com##.mod-pb-list .avatar.commend::before
+
+
+! Red Dot & "Hot" & "New"
+qzone.qq.com,show.qq.com##.ico_new
+qzone.qq.com##.sn-radio
+qzone.qq.com##.icon_app_new_cn,.icon_app_recommend,.icon-red-dot
+h5.qzone.qq.com##.icon-new
+! #endregion

@@ -6,9 +6,6 @@
 ! 淘宝 Taobao
 www.taobao.com###smartbanner
 
-! 腾讯新闻 扫码领红包
-new.qq.com##.fixed-bar > a[href="//new.qq.com/hb_index.htm"]
-
 ! Sohu
 www.sohu.com##.adA, .adL, .adR, .godA, .godL, .godR, .god-banner, .god-article-bottom, .god-channel-top, #god_fix_1
 ! www.sohu.com##.allsee-item:not(:has(.allsee-image,.allsee-title))
@@ -171,14 +168,6 @@ c.biancheng.net###ad-arc-top, #ad-bottom-weixin
 fundact.eastmoney.com###referAdDiv
 
 ! Premium Content Promotion Start
-
-! 腾讯文档 会员皮肤
-docs.qq.com##.help-center-wrapper > .skin-container
-
-! QQ 空间
-qzone.qq.com##.f_item_ad
-user.qzone.qq.com###tab_applist_show > li[class]
-user.qzone.qq.com###tab_applist_show > li[data-recommend]
 
 ! 新浪邮箱
 ||m0.mail.sina.com.cn/apps/tab.php$subdocument

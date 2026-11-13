@@ -5,84 +5,20 @@
 
 */cdn-cgi/trace^$xhr
 
-*/jquery.sudy.wp.visitcount.js^$script
-*/_visitcount^$xhr
-
 ! Sentry
-! A big deal. Unblock it for the domains where it causes issues.
 ||js.sentry-cdn.com^$script
 ||sentry.io/api/*$xhr
 ||unpkg.zhimg.com/@cfe/sentry-script*$script
 
-! 腾讯 Tencent
-! ||baas.browser.qq.com/report/functions/report?$image
-! ||mp.weixin.qq.com/mp/report?$image
-||qq.com/*/report?$image
-
-||aegis.qq.com^
-
-! ||report.huatuo.qq.com^
-! ||report.qqweb.qq.com^
-||report.*.qq.com^
-||report.url.cn^
-
-||qzone.qq.com/proxy/domain/statistic.qzone.qq.com^
-
-! ||h5.qzone.qq.com/report/md^
-||qzone.qq.com/report/*$xhr,image
-
-! ||qzonestyle.gtimg.cn/ac/qzfl/release/expand/ping_sender.js^
-! ||qzs.qq.com/ac/qzfl/release/expand/ping_sender.js^
-*/ac/qzfl/release/expand/ping_sender.js^
-
-||qzonestyle.gtimg.cn/qzone/v8/ic/iframeReport.js^
-||h5.qzone.qq.com/iframe/report^
-
-||qzonestyle.gtimg.cn/qzone/v8/core/stat.js^
-||qzonestyle.gtimg.cn/qzone/v8/ic/stat_monitor.js^
-
-! ||user.qzone.qq.com/proxy/domain/analy.qzone.qq.com/cgi-bin/apptrace^$image
-*/cgi-bin/apptrace^$image
-||huatuospeed.weiyun.com/cgi-bin/r.cgi^$image
-||huatuocode.weiyun.com/code.cgi^$image
-
-||dj.captcha.qq.com/caplog
-||stdl.qq.com/stdl/qb/js/qblog.js
-
-! ||mat1.gtimg.com/js/speed_v1.9-min.js
-
-||mat1.gtimg.com/js/speed_*.js
-
-! From mail.qq.com
-||rl.mail.qq.com/cgi-bin/getinvestigate
-
-! From mp.weixin.qq.com
-! ||mp.weixin.qq.com/mp/appmsgreport?
-! ||mp.weixin.qq.com/mp/jsreport?
-! ||mp.weixin.qq.com/mp/fereport?
-! ||mp.weixin.qq.com/mp/musicreport?
-||mp.weixin.qq.com/mp/*report?$image,xmlhttprequest
-||mp.weixin.qq.com/mp/jsmonitor?
-||badjs.weixinbridge.com^
-
-! From guanjia.qq.com
-||tajs.qq.com/stats$important
-||s.pc.qq.com/guanjia/js/tj.js
-||guanjia.qq.com/assets/js/*$script
-
-! From www.163.com
-||browsertdidticket.m.qq.com^
-||gatherer.m.qq.com/event/report^
+! jquery.sudy.wp.visitcount.js
+*/jquery.sudy.wp.visitcount.js^$script
+*/_visitcount^$xhr
 
 ! 阿里 Ali
-
-! 杀伤力太大…
-! ||mmstat.com^
 
 ! g.alicdn.com/alilog/mlog/aplus_v2.js
 ! s.tbcdn.cn/s/aplus_v2.js
 ! ||g.alicdn.com/alilog/*
-/mlog/*
 /aplus_v2.js^
 
 ! aeu.alicdn.com/js/cj/110.js
@@ -99,12 +35,6 @@
 ! ||s3.pstatp.com/pgc/tech/collect/collect-autotrack-rangers.js
 ||pstatp.com/pgc/tech/collect/*
 */collect/collect-autotrack-rangers.js$script
-
-! 奇虎 360
-! ||js.passport.qihucdn.com/11.0.1.js
-||js.passport.qihucdn.com/*$script,third-party
-||jspassport.ssl.qhimg.com^$script,third-party
-
 
 ! 微博 Weibo
 ! ||weibo.com/ajax/log/rum$xhr
@@ -135,7 +65,7 @@
 ! ||tr.jianshu.com/fe/1/mon/atf$xhr
 ||tr.jianshu.com^
 
-! Gitee
+! Gitee - 访问统计
 ||gitee.com/*/access/add_access_log^$xhr
 
 ! TapTap
@@ -156,6 +86,7 @@
 ||busuanzi.ibruce.info/busuanzi/*$third-party
 
 ! Zhihu
+||static.zhihu.com/heifetz/chunks/zswsdid.*.js
 ||sugar.zhihu.com^
 ||unpkg.zhimg.com/za-js-sdk^
 ||unpkg.zhihu.com/za-js-sdk^

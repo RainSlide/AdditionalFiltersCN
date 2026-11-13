@@ -20,10 +20,6 @@ www.sohu.com###share
 
 photo.blog.sina.com.cn###sharePhoto
 
-! 腾讯新闻
-new.qq.com##.share
-new.qq.com##.share-title
-
 ! BIE 别的
 www.biede.com##.share-component,.social-share,.share-post
 

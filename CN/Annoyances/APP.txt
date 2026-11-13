@@ -3,12 +3,6 @@
 ! Expire: 7 days
 ! ------------------------------------------------------------------------------
 
-! 有道
-! 使用网易有道翻译 Windows版提高你的工作效率
-fanyi.youdao.com##.download_ch
-! 顶部 立即免费下载 弹窗
-fanyi.youdao.com##.top-nav > .top-area > .nav_list > .nav_item > .client
-
 ! 搜狐 扫码打开手机搜狐网 APP
 www.sohu.com##.phone-scan
 
@@ -22,9 +16,6 @@ fanyi.sogou.com##.products
 fanyi.sogou.com###J_download_app
 ! 搜狗问问小程序
 wenwen.sogou.com##.sgww-xcx
-
-! 腾讯软件中心
-pc.qq.com###J_banmgrbox
 
 ! 高德地图
 amap.com###amapAppDownload, #amap-result-banner

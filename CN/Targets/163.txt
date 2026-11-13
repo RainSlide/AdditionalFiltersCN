@@ -36,8 +36,8 @@
 ! clientlogusf.music.163.com/api/feedback/weblog
 ||163.com/api/feedback/weblog^
 
-! extends ||ac.dun.163.com^ in EasyPrivacy
-||ac.dun.163yun.com/v3/b^
+! ||music.163.com/weapi/feedback/weblog^
+||163.com/weapi/feedback/weblog^
 
 ! 网易有道 Netease Youdao
 ! rlogs.youdao.com/rlog.php
@@ -133,6 +133,11 @@ fanyi.youdao.com###transMan
 fanyi.youdao.com##.inside__products
 fanyi.youdao.com##.side__nav
 fanyi.youdao.com##.ic_new_tag
+
+! 使用网易有道翻译 Windows版提高你的工作效率
+fanyi.youdao.com##.download_ch
+! 顶部 立即免费下载 弹窗
+fanyi.youdao.com##.top-nav > .top-area > .nav_list > .nav_item > .client
 ! #endregion
 
 ! #region 网易邮箱6.0版
