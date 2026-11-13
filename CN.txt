@@ -6,13 +6,10 @@
 !     which should be found & listed & blocked YEARS ago.
 ! Homepage: https://github.com/Crystal-RainSlide/AdditionalFiltersCN
 ! Expire: 7 days
-! Last Modified: 20-Oct-2026/22:21:48+08:00
+! Last Modified: 13-Nov-2026/22:20:42+08:00
 
 ! 淘宝 Taobao
 www.taobao.com###smartbanner
-
-! 腾讯新闻 扫码领红包
-new.qq.com##.fixed-bar > a[href="//new.qq.com/hb_index.htm"]
 
 ! Sohu
 www.sohu.com##.adA, .adL, .adR, .godA, .godL, .godR, .god-banner, .god-article-bottom, .god-channel-top, #god_fix_1
@@ -177,14 +174,6 @@ fundact.eastmoney.com###referAdDiv
 
 ! Premium Content Promotion Start
 
-! 腾讯文档 会员皮肤
-docs.qq.com##.help-center-wrapper > .skin-container
-
-! QQ 空间
-qzone.qq.com##.f_item_ad
-user.qzone.qq.com###tab_applist_show > li[class]
-user.qzone.qq.com###tab_applist_show > li[data-recommend]
-
 ! 新浪邮箱
 ||m0.mail.sina.com.cn/apps/tab.php$subdocument
 
@@ -201,12 +190,6 @@ gitee.com##.git-project-service
 
 ! Premium Content Promotion End
 
-! 有道
-! 使用网易有道翻译 Windows版提高你的工作效率
-fanyi.youdao.com##.download_ch
-! 顶部 立即免费下载 弹窗
-fanyi.youdao.com##.top-nav > .top-area > .nav_list > .nav_item > .client
-
 ! 搜狐 扫码打开手机搜狐网 APP
 www.sohu.com##.phone-scan
 
@@ -220,9 +203,6 @@ fanyi.sogou.com##.products
 fanyi.sogou.com###J_download_app
 ! 搜狗问问小程序
 wenwen.sogou.com##.sgww-xcx
-
-! 腾讯软件中心
-pc.qq.com###J_banmgrbox
 
 ! 高德地图
 amap.com###amapAppDownload, #amap-result-banner
@@ -359,10 +339,6 @@ www.sohu.com###share
 
 photo.blog.sina.com.cn###sharePhoto
 
-! 腾讯新闻
-new.qq.com##.share
-new.qq.com##.share-title
-
 ! BIE 别的
 www.biede.com##.share-component,.social-share,.share-post
 
@@ -431,12 +407,6 @@ public.renren.com###Share
 
 ||ue.17173cdn.com/a/lib/*/share/index.js
 
-! QQ空间 用户名右侧 开通黄钻
-user.qzone.qq.com##.qz-btn-vip-open
-
-! 天翼云 VIP 标志
-cloud.189.cn##.vipIcon
-
 ! ||res.wx.qq.com/open/js/jweixin-*.js
 ! ||oschina.net/js/utils/jweixin-*.js
 ! ||www.yuketang.cn/static/js/libs/jweixin-*.js
@@ -461,24 +431,18 @@ www.iplaysoft.com###elevator_social > .float-left:nth-of-type(2):style(width: 10
 www.secrss.com##.qrcode
 
 ! #region Red Dot & "Hot" & "New"
-qzone.qq.com,show.qq.com##.ico_new
-qzone.qq.com##.sn-radio
-qzone.qq.com##.icon_app_new_cn,.icon_app_recommend,.icon-red-dot
-h5.qzone.qq.com##.icon-new
-
-docs.qq.com##.dui-badge-dot
-mail.qq.com##.ico_rednew
-
-! QQ音乐 抢特权
-||y.qq.com/mediastyle/yqq/extra/mark_1.png
-y.qq.com##.top_nav__mark
-
 www.zhihu.com##.TopSearch-hot:style(filter: grayscale())
 
 www.chinaz.com##.hot
 
-! 模力方舟
+! 顶栏 - 模力方舟 右上角 图标
 gitee.com###gitee-blog > .ui.image
+gitee.com##nav > ul > li > a > img[alt="notification star"]
+
+! 首页顶栏 - 价格 右上角 特惠
+gitee.com##nav > ul > li > a[href="/enterprises/price"] > sup
+
+! red dot
 
 www.gcores.com##.navLayout_item_append
 
@@ -497,9 +461,6 @@ douban.com##.ui-overlay-show, .ui-overlay-show body:style(width: initial !import
 dl.3dmgame.com##.downlwrap > .downl_L > .downl_list > .list_r
 down.ali213.net##.common_down_l > .common_down_l_one > h4 ~ *
 
-! 腾讯视频 iframe 底部推荐
-v.qq.com##.txp_tipbar
-
 ! 搜狐 Sohu
 ! 劣质内容：大家都在看，热门精选
 www.sohu.com###articleAllsee, .hot-atlas
@@ -514,21 +475,6 @@ weibo.com##.gn_search_v2 > .placeholder
 m.weibo.cn##.m-search > .m-text-cut:style(color: transparent; user-select: none;)
 ! m.weibo.cn 搜索页
 m.weibo.cn##.nt-search input[type="search"]::placeholder
-
-! 腾讯文档 水印
-docs.qq.com###watermark-container
-
-! QQ 空间
-! 看看大家都看了什么？开通黄钻可查看1000人的访问轨迹。
-user.qzone.qq.com##.fn_accessLog_tips
-
-h5.qzone.qq.com##.mod-native-tips-wrap
-h5.qzone.qq.com##li[global-hot="topbar.vip"]
-h5.qzone.qq.com##.gb-nav > li:style(width: 25% !important)
-h5.qzone.qq.com##.mod-pb-list .avatar.commend::before
-
-! QQ 看点快报 热点推荐
-kuaibao.qq.com##.recomm-card
 
 ! Zhihu
 ||www.zhihu.com/api/*/hot_recommendation$xmlhttprequest
@@ -556,6 +502,9 @@ www.jianshu.com##header span[aria-label="简书钻"]
 
 ! 新京报
 www.bjnews.com.cn##.layer_mian
+
+! 天翼云 VIP 标志
+cloud.189.cn##.vipIcon
 
 ! 超星
 ||chaoxing.com/ananas/space/exam/js/enc_js_work.js
@@ -678,84 +627,20 @@ www.souid.com##+js(ra, onmousemove|oncontextmenu|ondragstart|onselectstart|onsel
 
 */cdn-cgi/trace^$xhr
 
-*/jquery.sudy.wp.visitcount.js^$script
-*/_visitcount^$xhr
-
 ! Sentry
-! A big deal. Unblock it for the domains where it causes issues.
 ||js.sentry-cdn.com^$script
 ||sentry.io/api/*$xhr
 ||unpkg.zhimg.com/@cfe/sentry-script*$script
 
-! 腾讯 Tencent
-! ||baas.browser.qq.com/report/functions/report?$image
-! ||mp.weixin.qq.com/mp/report?$image
-||qq.com/*/report?$image
-
-||aegis.qq.com^
-
-! ||report.huatuo.qq.com^
-! ||report.qqweb.qq.com^
-||report.*.qq.com^
-||report.url.cn^
-
-||qzone.qq.com/proxy/domain/statistic.qzone.qq.com^
-
-! ||h5.qzone.qq.com/report/md^
-||qzone.qq.com/report/*$xhr,image
-
-! ||qzonestyle.gtimg.cn/ac/qzfl/release/expand/ping_sender.js^
-! ||qzs.qq.com/ac/qzfl/release/expand/ping_sender.js^
-*/ac/qzfl/release/expand/ping_sender.js^
-
-||qzonestyle.gtimg.cn/qzone/v8/ic/iframeReport.js^
-||h5.qzone.qq.com/iframe/report^
-
-||qzonestyle.gtimg.cn/qzone/v8/core/stat.js^
-||qzonestyle.gtimg.cn/qzone/v8/ic/stat_monitor.js^
-
-! ||user.qzone.qq.com/proxy/domain/analy.qzone.qq.com/cgi-bin/apptrace^$image
-*/cgi-bin/apptrace^$image
-||huatuospeed.weiyun.com/cgi-bin/r.cgi^$image
-||huatuocode.weiyun.com/code.cgi^$image
-
-||dj.captcha.qq.com/caplog
-||stdl.qq.com/stdl/qb/js/qblog.js
-
-! ||mat1.gtimg.com/js/speed_v1.9-min.js
-
-||mat1.gtimg.com/js/speed_*.js
-
-! From mail.qq.com
-||rl.mail.qq.com/cgi-bin/getinvestigate
-
-! From mp.weixin.qq.com
-! ||mp.weixin.qq.com/mp/appmsgreport?
-! ||mp.weixin.qq.com/mp/jsreport?
-! ||mp.weixin.qq.com/mp/fereport?
-! ||mp.weixin.qq.com/mp/musicreport?
-||mp.weixin.qq.com/mp/*report?$image,xmlhttprequest
-||mp.weixin.qq.com/mp/jsmonitor?
-||badjs.weixinbridge.com^
-
-! From guanjia.qq.com
-||tajs.qq.com/stats$important
-||s.pc.qq.com/guanjia/js/tj.js
-||guanjia.qq.com/assets/js/*$script
-
-! From www.163.com
-||browsertdidticket.m.qq.com^
-||gatherer.m.qq.com/event/report^
+! jquery.sudy.wp.visitcount.js
+*/jquery.sudy.wp.visitcount.js^$script
+*/_visitcount^$xhr
 
 ! 阿里 Ali
-
-! 杀伤力太大…
-! ||mmstat.com^
 
 ! g.alicdn.com/alilog/mlog/aplus_v2.js
 ! s.tbcdn.cn/s/aplus_v2.js
 ! ||g.alicdn.com/alilog/*
-/mlog/*
 /aplus_v2.js^
 
 ! aeu.alicdn.com/js/cj/110.js
@@ -772,12 +657,6 @@ www.souid.com##+js(ra, onmousemove|oncontextmenu|ondragstart|onselectstart|onsel
 ! ||s3.pstatp.com/pgc/tech/collect/collect-autotrack-rangers.js
 ||pstatp.com/pgc/tech/collect/*
 */collect/collect-autotrack-rangers.js$script
-
-! 奇虎 360
-! ||js.passport.qihucdn.com/11.0.1.js
-||js.passport.qihucdn.com/*$script,third-party
-||jspassport.ssl.qhimg.com^$script,third-party
-
 
 ! 微博 Weibo
 ! ||weibo.com/ajax/log/rum$xhr
@@ -808,7 +687,7 @@ www.souid.com##+js(ra, onmousemove|oncontextmenu|ondragstart|onselectstart|onsel
 ! ||tr.jianshu.com/fe/1/mon/atf$xhr
 ||tr.jianshu.com^
 
-! Gitee
+! Gitee - 访问统计
 ||gitee.com/*/access/add_access_log^$xhr
 
 ! TapTap
@@ -829,6 +708,7 @@ www.souid.com##+js(ra, onmousemove|oncontextmenu|ondragstart|onselectstart|onsel
 ||busuanzi.ibruce.info/busuanzi/*$third-party
 
 ! Zhihu
+||static.zhihu.com/heifetz/chunks/zswsdid.*.js
 ||sugar.zhihu.com^
 ||unpkg.zhimg.com/za-js-sdk^
 ||unpkg.zhihu.com/za-js-sdk^
@@ -1041,8 +921,8 @@ pastebin.com#@#.post-view
 ! clientlogusf.music.163.com/api/feedback/weblog
 ||163.com/api/feedback/weblog^
 
-! extends ||ac.dun.163.com^ in EasyPrivacy
-||ac.dun.163yun.com/v3/b^
+! ||music.163.com/weapi/feedback/weblog^
+||163.com/weapi/feedback/weblog^
 
 ! 网易有道 Netease Youdao
 ! rlogs.youdao.com/rlog.php
@@ -1138,6 +1018,11 @@ fanyi.youdao.com###transMan
 fanyi.youdao.com##.inside__products
 fanyi.youdao.com##.side__nav
 fanyi.youdao.com##.ic_new_tag
+
+! 使用网易有道翻译 Windows版提高你的工作效率
+fanyi.youdao.com##.download_ch
+! 顶部 立即免费下载 弹窗
+fanyi.youdao.com##.top-nav > .top-area > .nav_list > .nav_item > .client
 ! #endregion
 
 ! #region 网易邮箱6.0版
@@ -1445,55 +1330,84 @@ zhidao.baidu.com##.question-number-text-chain
 zhidao.baidu.com##.shop-entrance
 ! #endregion
 
-! 阻止B站往链接里加 spmid
-||hdslb.com/bfs/seed/jinkela/short/auto-append-spmid.js^
+! #region js
 
-! data.bilibili.com & /seed/log/report/log-reporter.js
-! ||s1.hdslb.com/bfs/seed/log/report/log-reporter.js
+! ScSDK
+! ||s1.hdslb.com/bfs/seed/jinkela/short/minntaki-wasm-sdk/bili-sc-sdk.umd.js
+||hdslb.com/bfs/seed/jinkela/short/minntaki-wasm-sdk/*
+
+! @bilibili/log-reporter
+! ||s1.hdslb.com/bfs/seed/log/report/log-reporter.js^
+! EasyPrivacy 默认屏蔽 /log/report/*，用 badfilter 取消排除即可
+@@/log/report/*$script,from=bilibili.com,badfilter
+
+! 必火推广 / CoMmercial
+! cm.bilibili.com & /cm/cm-sdk/static/js/bili-collect.js
+@@||hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js$badfilter
+||hdslb.com/bfs/cm/*
+||cm.bilibili.com^$xhr,from=www.bilibili.com|m.bilibili.com
+
+! @bilibili/bili-user-fingerprint
+! ||s1.hdslb.com/bfs/seed/jinkela/short/user-fingerprint/bili-user-fingerprint.min.js
+||hdslb.com/bfs/seed/jinkela/short/user-fingerprint/*
+
+! 阻止B站往链接里加 spm_id_from
+! 针对版本较旧的浏览器屏蔽代码；最新浏览器下，对应代码已被嵌入至主要 JS 内，无法单独屏蔽
+||hdslb.com/bfs/seed/jinkela/short/auto-append-spmid.js^
+! 针对最新浏览器，使用 addEventListener-defuser 防止对应代码往链接里加 spm_id_from
+bilibili.com##+js(aeld, click,       spm_id_from, elements, body)
+bilibili.com##+js(aeld, contextmenu, spm_id_from, elements, body)
+
+! #endregion
+
+! #region xhr
+
+! HttpStatsLog / data.bilibili.com
 ! https://github.com/uBlockOrigin/uAssets/issues/29273
+! 1. 用 badfilter 取消现有白名单规则
 @@||data.bilibili.com^$xhr,ping,badfilter
 @@||data.bilibili.com/v2/log/web?$xhr,1p,badfilter
+! 2. 屏蔽 data.bilibili.com
 ||data.bilibili.com^
+! 3. 应用最小化白名单规则，只排除视频卡片的 不感兴趣/取消不感兴趣
 @@||data.bilibili.com/log/web?*|0.0.tianma.dislike.click|*
 @@||data.bilibili.com/log/web?*|0.0.tianma.dislike-cancel.click|*
 bilibili.com##+js(trusted-suppress-native-method, navigator.sendBeacon, '/data\.bilibili\.com\/(?!log\/web\?.+0\.0\.tianma\.dislike(-cancel)?\.click)/', prevent)
 
-! CoMmercial
-! cm.bilibili.com & /cm/cm-sdk/static/js/bili-collect.js
-@@||hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js$badfilter
-||s1.hdslb.com/bfs/cm/*
-||cm.bilibili.com^
+! HttpNow & HttpStatsClick in https://s1.hdslb.com/bfs/static/player/main/core.*.js
+! ||api.bilibili.com/x/click-interface/click/now^
+! ||api.bilibili.com/x/click-interface/click/web/h5^
+||api.bilibili.com/x/click-interface/click^
 
-! /user-fingerprint/bili-user-fingerprint.min.js
-! ||s1.hdslb.com/bfs/seed/jinkela/short/user-fingerprint/bili-user-fingerprint.min.js
-||hdslb.com/bfs/seed/jinkela/short/user-fingerprint/*
+! Data Collector in https://s1.hdslb.com/bfs/static/jinkela/video/video.*.js
+||api.bilibili.com/x/web-frontend/data/collector^
 
-! /b-mirror/biliMirror.umd.mini.js
-! ||s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js
-||hdslb.com/bfs/seed/jinkela/short/b-mirror/*
+! Monitor
+||api.bilibili.com/open/monitor/report^
 
 ! Biligame Impression
 ! ||impression.biligame.com/api/impression/bilibili_pc
 ||impression.biligame.com^
 
-! Click Interface API
-||api.bilibili.com/x/click-interface/click/now^
-! Data Collector API
-||api.bilibili.com/x/web-frontend/data/collector$xhr
+! 修复 404 页面，不知为何需要 source_id 来获取图片
+@@||api.bilibili.com/x/activity_components/eva_operation/list^$removeparam=source_id
 
-! Monitor
-||api.bilibili.com/open/monitor/report^
+! #endregion
+
+! 首页推广 - 在 AdGuard CN/TW 规则的基础上去除空白
+bilibili.com##.feed-card:has(> .bili-feed-card > .bili-video-card.is-rcmd > div.bili-video-card__wrap .bili-video-card__stats--icon > path[d*="M16.9122 1.50323C17.4366 1.48358 17.99745 1.54938 18.4701 1.8207C18.9423 2.09168 19.28085"])
 
 ! 广告通用
 www.bilibili.com##.ad-report
-! 右侧推荐视频列表底部广告
+! 右侧推荐视频列表 底部广告
 www.bilibili.com##.ad-floor-exp
 ! 推荐视频
 www.bilibili.com##.video-page-special-card,.video-page-special-card-small
-! 评论区顶部
-www.bilibili.com##.reply-notice
+! 评论区顶部（www.bilibili.com, t.bilibili.com）
+bilibili.com##.reply-notice
 
 ! 顶栏
+! 各种限时活动推广
 ! ||api.bilibili.com/x/web-show/res/locs^
 bilibili.com##.loc-entry,.left-loc-entry
 ! 站外播放器 顶部推荐
@@ -1523,6 +1437,128 @@ bilibili.com##.nav-link-item:has(.download-client-trigger)
 bilibili.com##.van-popper-login .title, .van-popper-login .img-panel
 
 
+
+! #region DC
+
+! 腾讯 Tencent
+! ||baas.browser.qq.com/report/functions/report?$image
+! ||mp.weixin.qq.com/mp/report?$image
+||qq.com/*/report?$image
+
+||aegis.qq.com^
+
+! ||report.huatuo.qq.com^
+! ||report.qqweb.qq.com^
+||report.*.qq.com^
+||report.url.cn^
+
+||qzone.qq.com/proxy/domain/statistic.qzone.qq.com^
+
+! ||h5.qzone.qq.com/report/md^
+||qzone.qq.com/report/*$xhr,image
+
+! ||qzonestyle.gtimg.cn/ac/qzfl/release/expand/ping_sender.js^
+! ||qzs.qq.com/ac/qzfl/release/expand/ping_sender.js^
+*/ac/qzfl/release/expand/ping_sender.js^
+
+||qzonestyle.gtimg.cn/qzone/v8/ic/iframeReport.js^
+||h5.qzone.qq.com/iframe/report^
+
+||qzonestyle.gtimg.cn/qzone/v8/core/stat.js^
+||qzonestyle.gtimg.cn/qzone/v8/ic/stat_monitor.js^
+
+! ||user.qzone.qq.com/proxy/domain/analy.qzone.qq.com/cgi-bin/apptrace^$image
+*/cgi-bin/apptrace^$image
+||huatuospeed.weiyun.com/cgi-bin/r.cgi^$image
+||huatuocode.weiyun.com/code.cgi^$image
+
+||dj.captcha.qq.com/caplog
+||stdl.qq.com/stdl/qb/js/qblog.js
+
+! ||mat1.gtimg.com/js/speed_v1.9-min.js
+
+||mat1.gtimg.com/js/speed_*.js
+
+! From mail.qq.com
+||rl.mail.qq.com/cgi-bin/getinvestigate
+
+! From mp.weixin.qq.com
+! ||mp.weixin.qq.com/mp/appmsgreport?
+! ||mp.weixin.qq.com/mp/jsreport?
+! ||mp.weixin.qq.com/mp/fereport?
+! ||mp.weixin.qq.com/mp/musicreport?
+||mp.weixin.qq.com/mp/*report?$image,xmlhttprequest
+||mp.weixin.qq.com/mp/jsmonitor?
+||badjs.weixinbridge.com^
+
+! From guanjia.qq.com
+||tajs.qq.com/stats$important
+||s.pc.qq.com/guanjia/js/tj.js
+||guanjia.qq.com/assets/js/*$script
+
+! From www.163.com
+||browsertdidticket.m.qq.com^
+||gatherer.m.qq.com/event/report^
+
+! #endregion
+
+! 腾讯新闻 扫码领红包
+new.qq.com##.fixed-bar > a[href="//new.qq.com/hb_index.htm"]
+
+! 腾讯新闻 分享
+new.qq.com##.share
+new.qq.com##.share-title
+
+! QQ 看点快报 热点推荐
+kuaibao.qq.com##.recomm-card
+
+! 腾讯软件中心
+pc.qq.com###J_banmgrbox
+
+! 腾讯视频 iframe 底部推荐
+v.qq.com##.txp_tipbar
+
+! QQ音乐 抢特权
+||y.qq.com/mediastyle/yqq/extra/mark_1.png
+y.qq.com##.top_nav__mark
+
+! #region 腾讯文档
+! 主页顶栏 会员中心
+docs.qq.com##.desktop-vip-center
+
+! 文档顶栏用户菜单 会员推广
+docs.qq.com##.vip-info-panel.none
+
+! 水印
+docs.qq.com###watermark-container
+
+! 免费体验企业版 右侧 new
+docs.qq.com##.desktop-enterprise-edition-entry-label .dui-badge-count
+! #endregion
+
+! #region QQ 空间
+qzone.qq.com##.f_item_ad
+user.qzone.qq.com###tab_applist_show > li[class]
+user.qzone.qq.com###tab_applist_show > li[data-recommend]
+
+! 用户名右侧 开通黄钻
+user.qzone.qq.com##.qz-btn-vip-open
+
+! 看看大家都看了什么？开通黄钻可查看1000人的访问轨迹。
+user.qzone.qq.com##.fn_accessLog_tips
+
+h5.qzone.qq.com##.mod-native-tips-wrap
+h5.qzone.qq.com##li[global-hot="topbar.vip"]
+h5.qzone.qq.com##.gb-nav > li:style(width: 25% !important)
+h5.qzone.qq.com##.mod-pb-list .avatar.commend::before
+
+
+! Red Dot & "Hot" & "New"
+qzone.qq.com,show.qq.com##.ico_new
+qzone.qq.com##.sn-radio
+qzone.qq.com##.icon_app_new_cn,.icon_app_recommend,.icon-red-dot
+h5.qzone.qq.com##.icon-new
+! #endregion
 
 ! .qrcode_show 超链接 点击后弹出二维码广告
 ! ||9mam0s.yzhy20.cn/res/onlinedown/js/qrcode.js

@@ -35,19 +35,39 @@ www.baidu.com###content_right
 
 ! BiliBili
 
-! 1. 首页大清洗
+! ReporterPb
+! ||s1.hdslb.com/bfs/seed/jinkela/short/reporter-pb/index.js
 
-! 内测
-! www.bilibili.com##.bili-feed4-layout, .header-channel
-! www.bilibili.com##.palette-button-wrap:style(left: 90% !important)
-! 新版
-! www.bilibili.com##.bili-layout, .bili-header__banner
-! 旧版
-! www.bilibili.com##.first-screen, .storey-box
-! APP下载入口
-! www.bilibili.com##.qrcode-wrapper_biliapp
+! ScSDK
+||s1.hdslb.com/bfs/seed/jinkela/short/minntaki-wasm-sdk/bili-sc-sdk.umd.js
 
-! 1.1 首页盈利
+! @bilibili/bili-mirror
+! 屏蔽后无法密码登录，只能扫码登录。
+! 登录页对应错误：TypeError: this.$customReportPb is not a function
+! ||s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js
+||hdslb.com/bfs/seed/jinkela/short/b-mirror/*
+
+! @bilibili/bmg-unpkg
+||s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/cmpt.js
+||s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/fallback.js
+
+! BPNC / BPP2PSDK
+! ||s1.hdslb.com/bfs/static/nc/nc-loader-2.14.0.min.js
+||hdslb.com/bfs/static/nc/*
+
+! iframe
+
+! 一个顶栏要什么 iframe
+||message.bilibili.com/pages/nav/header_sync$frame
+
+! 貌似是跨域相关，不能干掉
+! ||s1.hdslb.com/bfs/seed/jinkela/short/cols/iframe.html
+
+! 稍后再看画中画
+! https://s1.hdslb.com/bfs/seed/jinkela/short/leader-election/iframe.html?leaderID=watchlaterpipwindow
+||s1.hdslb.com/bfs/seed/jinkela/short/leader-election/iframe.html$frame
+
+! 首页内容屏蔽
 
 ! OGV（番剧、国创、综艺、动画，Occupationally Generated Video）
 ||api.bilibili.com/x/web-interface/index/ogv/rcmd^
@@ -58,20 +78,6 @@ www.baidu.com###content_right
 ||api.live.bilibili.com/xlive/web-interface/v1/webMain/getMoreRecList^
 ||manga.bilibili.com/twirp/comic.v1.MainStation/Feed^
 ||api.bilibili.com/x/web-show/res/locs^
-
-! 2. 顶栏大清洗
-
-! 新版
-bilibili.com##.bili-header .right-entry--vip
-bilibili.com##.bili-header .right-entry > .v-popover-wrap:has(> .right-entry--vip)
-! bilibili.com##.bili-header .left-entry .default-entry
-! bilibili.com##.bili-header .left-entry > .v-popover-wrap:has(.default-entry)
-bilibili.com##.bili-header .left-entry > li:not(:first-child)
-bilibili.com##.bili-header .bili-header__bar:style(position: relative !important)
-! 旧版
-bilibili.com##.nav-link .nav-link-ul .nav-link-item:not(:first-child)
-! 古代旧版
-bilibili.com##.nav-items-ctnr, .showmore-link
 
 ! ------------------------------------------------------------------------------
 

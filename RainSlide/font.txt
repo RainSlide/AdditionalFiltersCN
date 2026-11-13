@@ -28,8 +28,11 @@
 
 ||www.kernel.org/theme/fonts/*
 
-! Microsoft
+! Microsoft Outlook
 ||ow2.res.office365.com/assets/mail/fonts/v1/fonts/segoe*
+
+! Shopify
+||fonts.shopifycdn.com^
 
 ! Fandom
 ||fonts.gstatic.com^$font,domain=fandom.com

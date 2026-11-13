@@ -3,55 +3,84 @@
 ! Expire: 7 days
 ! ------------------------------------------------------------------------------
 
-! 阻止B站往链接里加 spmid
-||hdslb.com/bfs/seed/jinkela/short/auto-append-spmid.js^
+! #region js
 
-! data.bilibili.com & /seed/log/report/log-reporter.js
-! ||s1.hdslb.com/bfs/seed/log/report/log-reporter.js
+! ScSDK
+! ||s1.hdslb.com/bfs/seed/jinkela/short/minntaki-wasm-sdk/bili-sc-sdk.umd.js
+||hdslb.com/bfs/seed/jinkela/short/minntaki-wasm-sdk/*
+
+! @bilibili/log-reporter
+! ||s1.hdslb.com/bfs/seed/log/report/log-reporter.js^
+! EasyPrivacy 默认屏蔽 /log/report/*，用 badfilter 取消排除即可
+@@/log/report/*$script,from=bilibili.com,badfilter
+
+! 必火推广 / CoMmercial
+! cm.bilibili.com & /cm/cm-sdk/static/js/bili-collect.js
+@@||hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js$badfilter
+||hdslb.com/bfs/cm/*
+||cm.bilibili.com^$xhr,from=www.bilibili.com|m.bilibili.com
+
+! @bilibili/bili-user-fingerprint
+! ||s1.hdslb.com/bfs/seed/jinkela/short/user-fingerprint/bili-user-fingerprint.min.js
+||hdslb.com/bfs/seed/jinkela/short/user-fingerprint/*
+
+! 阻止B站往链接里加 spm_id_from
+! 针对版本较旧的浏览器屏蔽代码；最新浏览器下，对应代码已被嵌入至主要 JS 内，无法单独屏蔽
+||hdslb.com/bfs/seed/jinkela/short/auto-append-spmid.js^
+! 针对最新浏览器，使用 addEventListener-defuser 防止对应代码往链接里加 spm_id_from
+bilibili.com##+js(aeld, click,       spm_id_from, elements, body)
+bilibili.com##+js(aeld, contextmenu, spm_id_from, elements, body)
+
+! #endregion
+
+! #region xhr
+
+! HttpStatsLog / data.bilibili.com
 ! https://github.com/uBlockOrigin/uAssets/issues/29273
+! 1. 用 badfilter 取消现有白名单规则
 @@||data.bilibili.com^$xhr,ping,badfilter
 @@||data.bilibili.com/v2/log/web?$xhr,1p,badfilter
+! 2. 屏蔽 data.bilibili.com
 ||data.bilibili.com^
+! 3. 应用最小化白名单规则，只排除视频卡片的 不感兴趣/取消不感兴趣
 @@||data.bilibili.com/log/web?*|0.0.tianma.dislike.click|*
 @@||data.bilibili.com/log/web?*|0.0.tianma.dislike-cancel.click|*
 bilibili.com##+js(trusted-suppress-native-method, navigator.sendBeacon, '/data\.bilibili\.com\/(?!log\/web\?.+0\.0\.tianma\.dislike(-cancel)?\.click)/', prevent)
 
-! CoMmercial
-! cm.bilibili.com & /cm/cm-sdk/static/js/bili-collect.js
-@@||hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js$badfilter
-||s1.hdslb.com/bfs/cm/*
-||cm.bilibili.com^
+! HttpNow & HttpStatsClick in https://s1.hdslb.com/bfs/static/player/main/core.*.js
+! ||api.bilibili.com/x/click-interface/click/now^
+! ||api.bilibili.com/x/click-interface/click/web/h5^
+||api.bilibili.com/x/click-interface/click^
 
-! /user-fingerprint/bili-user-fingerprint.min.js
-! ||s1.hdslb.com/bfs/seed/jinkela/short/user-fingerprint/bili-user-fingerprint.min.js
-||hdslb.com/bfs/seed/jinkela/short/user-fingerprint/*
+! Data Collector in https://s1.hdslb.com/bfs/static/jinkela/video/video.*.js
+||api.bilibili.com/x/web-frontend/data/collector^
 
-! /b-mirror/biliMirror.umd.mini.js
-! ||s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js
-||hdslb.com/bfs/seed/jinkela/short/b-mirror/*
+! Monitor
+||api.bilibili.com/open/monitor/report^
 
 ! Biligame Impression
 ! ||impression.biligame.com/api/impression/bilibili_pc
 ||impression.biligame.com^
 
-! Click Interface API
-||api.bilibili.com/x/click-interface/click/now^
-! Data Collector API
-||api.bilibili.com/x/web-frontend/data/collector$xhr
+! 修复 404 页面，不知为何需要 source_id 来获取图片
+@@||api.bilibili.com/x/activity_components/eva_operation/list^$removeparam=source_id
 
-! Monitor
-||api.bilibili.com/open/monitor/report^
+! #endregion
+
+! 首页推广 - 在 AdGuard CN/TW 规则的基础上去除空白
+bilibili.com##.feed-card:has(> .bili-feed-card > .bili-video-card.is-rcmd > div.bili-video-card__wrap .bili-video-card__stats--icon > path[d*="M16.9122 1.50323C17.4366 1.48358 17.99745 1.54938 18.4701 1.8207C18.9423 2.09168 19.28085"])
 
 ! 广告通用
 www.bilibili.com##.ad-report
-! 右侧推荐视频列表底部广告
+! 右侧推荐视频列表 底部广告
 www.bilibili.com##.ad-floor-exp
 ! 推荐视频
 www.bilibili.com##.video-page-special-card,.video-page-special-card-small
-! 评论区顶部
-www.bilibili.com##.reply-notice
+! 评论区顶部（www.bilibili.com, t.bilibili.com）
+bilibili.com##.reply-notice
 
 ! 顶栏
+! 各种限时活动推广
 ! ||api.bilibili.com/x/web-show/res/locs^
 bilibili.com##.loc-entry,.left-loc-entry
 ! 站外播放器 顶部推荐
